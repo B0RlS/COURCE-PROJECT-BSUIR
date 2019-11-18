@@ -1,0 +1,10 @@
+/ - if admin?(current_user)
+/   = render 'shared/navbar/_admin_navbar'
+/ - elsif director?(current_user)
+/   = render 'shared/navbar/_director_navbar'
+/ - elsif manager?(current_user)
+/   = render 'shared/navbar/_manager_navbar'
+/ - else
+
+- unless controller_name == "password_resets"
+   = render 'shared/navbar/user_navbar'
